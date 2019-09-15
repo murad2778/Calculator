@@ -12,7 +12,7 @@ public class Converter extends AppCompatActivity {
 
     TextView result,hint,hint2;
     EditText number1;
-    Button cmtoinch,fahtocel;
+    Button cmtoinch,fahtocel,doltotk;
 
 
     double result_num;
@@ -31,6 +31,7 @@ public class Converter extends AppCompatActivity {
 
         cmtoinch = (Button) findViewById(R.id.cmtoinch);
         fahtocel = (Button) findViewById(R.id.fahtocel);
+        doltotk = (Button) findViewById(R.id.doltotk);
 
         cmtoinch.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,7 +43,7 @@ public class Converter extends AppCompatActivity {
                 }
 
                 num1 = Float.parseFloat(number1.getText().toString());
-                hint.setText(num1+"cm =");
+                hint.setText(num1+" cm =");
                 hint2.setText("inch");
 
                 result_num = 0.394*num1;
@@ -63,10 +64,30 @@ public class Converter extends AppCompatActivity {
                 }
 
                 num1 = Float.parseFloat(number1.getText().toString());
-                hint.setText(num1+"Fahrenheit =");
+                hint.setText(num1+" Fahrenheit =");
                 hint2.setText("Celsius");
 
                 result_num = (num1-32)*5/9;
+                result.setText(String.valueOf(result_num));
+
+            }
+
+
+        });
+        doltotk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if(number1.length()==0){
+                    Toast.makeText(Converter.this,"Please Enter Input",Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                num1 = Float.parseFloat(number1.getText().toString());
+                hint.setText(num1+" US dollar =");
+                hint2.setText("taka");
+
+                result_num =num1*84.50;
                 result.setText(String.valueOf(result_num));
 
             }
