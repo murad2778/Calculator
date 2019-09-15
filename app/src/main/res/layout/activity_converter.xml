@@ -1,9 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Converter">
+    android:orientation="vertical"
+    android:paddingTop="40dp"
+    android:paddingRight="40dp"
+    android:paddingLeft="40dp"
+    android:background="@drawable/simple"
+    tools:context=".MainActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <EditText
+        android:id="@+id/number1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="20"
+        android:inputType="number"
+        android:hint="Enter the Number"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:ems="20"
+        android:textSize="20dp"/>
+
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Result"
+        android:gravity="center"
+        android:textSize="60sp"/>
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/hint2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:ems="20"
+        android:textSize="20dp"/>
+
+    <Button
+
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:id="@+id/cmtoinch"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="Centimeter to inch"    />
+
+
+</LinearLayout>
