@@ -55,5 +55,14 @@
         android:layout_height="wrap_content"
         android:text="Centimeter to inch"    />
 
+    <Button
+
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:id="@+id/fahtocel"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="Fahrenheit to Celsius"    />
+
 
 </LinearLayout>

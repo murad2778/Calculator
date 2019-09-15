@@ -11,7 +11,8 @@ public class Converter extends AppCompatActivity {
 
     TextView result,hint,hint2;
     EditText number1;
-    Button cmtoinch;
+    Button cmtoinch,fahtocel;
+
 
     double result_num;
     double num1;
@@ -28,16 +29,33 @@ public class Converter extends AppCompatActivity {
         number1 = (EditText) findViewById(R.id.number1);
 
         cmtoinch = (Button) findViewById(R.id.cmtoinch);
+        fahtocel = (Button) findViewById(R.id.fahtocel);
 
         cmtoinch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                num1 = Integer.parseInt(number1.getText().toString());
+                num1 = Float.parseFloat(number1.getText().toString());
                 hint.setText(num1+"cm =");
                 hint2.setText("inch");
 
                 result_num = 0.394*num1;
+                result.setText(String.valueOf(result_num));
+
+            }
+
+
+        });
+
+        fahtocel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                num1 = Float.parseFloat(number1.getText().toString());
+                hint.setText(num1+"Fahrenheit =");
+                hint2.setText("Celsius");
+
+                result_num = (num1-32)*5/9;
                 result.setText(String.valueOf(result_num));
 
             }
