@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Converter extends AppCompatActivity {
 
@@ -35,6 +36,11 @@ public class Converter extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                if(number1.length()==0){
+                    Toast.makeText(Converter.this,"Please Enter Input",Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
                 num1 = Float.parseFloat(number1.getText().toString());
                 hint.setText(num1+"cm =");
                 hint2.setText("inch");
@@ -50,6 +56,11 @@ public class Converter extends AppCompatActivity {
         fahtocel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                if(number1.length()==0){
+                    Toast.makeText(Converter.this,"Please Enter Input",Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
                 num1 = Float.parseFloat(number1.getText().toString());
                 hint.setText(num1+"Fahrenheit =");

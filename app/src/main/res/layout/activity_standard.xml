@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         android:hint="Enter 1st Number"
         android:gravity="center"/>
 
@@ -22,7 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         android:hint="Enter 2nd Number"
         android:gravity="center"/>
     <TextView
@@ -37,7 +37,10 @@
     android:id="@+id/result"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="20sp"
     android:text="Result"
+        android:maxLines="1"
     android:gravity="center"
     android:textSize="60sp"/>
 

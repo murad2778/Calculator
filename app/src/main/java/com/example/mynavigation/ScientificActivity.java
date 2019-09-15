@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -40,7 +41,6 @@ public class ScientificActivity extends AppCompatActivity {
         hint= (TextView) findViewById(R.id.hint);
 
         number1 = (EditText) findViewById(R.id.number1);
-       // number2 = (EditText) findViewById(R.id.number2);
 
         sin= (Button) findViewById(R.id.sin);
         cos = (Button) findViewById(R.id.cos);
@@ -53,10 +53,14 @@ public class ScientificActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                num1 = Integer.parseInt(number1.getText().toString());
+                if(number1.length()==0){
+                    Toast.makeText(ScientificActivity.this,"Please Enter Input",Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                num1 = Float.parseFloat(number1.getText().toString());
                 hint.setText("sin"+num1);
 
-                // num2 = Integer.parseInt(number2.getText().toString());
                 num1=Math.toRadians(num1);
                 result_num = Math.sin(num1);
                 result.setText(String.valueOf(result_num));
@@ -72,9 +76,13 @@ public class ScientificActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                num1 = Integer.parseInt(number1.getText().toString());
+                if(number1.length()==0){
+                    Toast.makeText(ScientificActivity.this,"Please Enter Input",Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                num1 = Float.parseFloat(number1.getText().toString());
                 hint.setText("cos"+num1);
-                //num2 = Integer.parseInt(number2.getText().toString());
                 num1=Math.toRadians(num1);
                 result_num =Math.cos(num1);
 
@@ -91,9 +99,13 @@ public class ScientificActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                num1 = Integer.parseInt(number1.getText().toString());
+                if(number1.length()==0){
+                    Toast.makeText(ScientificActivity.this,"Please Enter Input",Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                num1 = Float.parseFloat(number1.getText().toString());
                 hint.setText("tan"+num1);
-                //num2 = Integer.parseInt(number2.getText().toString());
                 num1=Math.toRadians(num1);
                 result_num =Math.tan(num1);
                 result.setText(String.valueOf(result_num));
@@ -110,8 +122,12 @@ public class ScientificActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                num1 = Integer.parseInt(number1.getText().toString());
-               // num2 = Integer.parseInt(number2.getText().toString());
+                if(number1.length()==0){
+                    Toast.makeText(ScientificActivity.this,"Please Enter Input",Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                num1 = Float.parseFloat(number1.getText().toString());
                 hint.setText("log "+num1);
                 result_num = Math.log(num1);
                 result.setText(String.valueOf(result_num));

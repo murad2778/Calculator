@@ -49,8 +49,17 @@ public class StandardActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                num1 = Integer.parseInt(number1.getText().toString());
-                num2 = Integer.parseInt(number2.getText().toString());
+                if(number1.length()==0){
+                    Toast.makeText(StandardActivity.this,"Please Enter First Number",Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                else if(number2.length()==0){
+                    Toast.makeText(StandardActivity.this,"Please Enter Second Number",Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                num1 = Float.parseFloat(number1.getText().toString());
+                num2 = Float.parseFloat(number2.getText().toString());
                 hint.setText(num1+"+"+num2+"=");
                 result_num = num1+num2;
                 result.setText(String.valueOf(result_num));
@@ -67,8 +76,17 @@ public class StandardActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                num1 = Integer.parseInt(number1.getText().toString());
-                num2 = Integer.parseInt(number2.getText().toString());
+                if(number1.length()==0){
+                    Toast.makeText(StandardActivity.this,"Please Enter First Number",Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                else if(number2.length()==0){
+                    Toast.makeText(StandardActivity.this,"Please Enter Second Number",Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                num1 = Float.parseFloat(number1.getText().toString());
+                num2 = Float.parseFloat(number2.getText().toString());
                 hint.setText(num1+"-"+num2+"=");
                 result_num = num1-num2;
                 result.setText(String.valueOf(result_num));
@@ -85,8 +103,17 @@ public class StandardActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                num1 = Integer.parseInt(number1.getText().toString());
-                num2 = Integer.parseInt(number2.getText().toString());
+                if(number1.length()==0){
+                    Toast.makeText(StandardActivity.this,"Please Enter First Number",Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                else if(number2.length()==0){
+                    Toast.makeText(StandardActivity.this,"Please Enter Second Number",Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                num1 = Float.parseFloat(number1.getText().toString());
+                num2 = Float.parseFloat(number2.getText().toString());
                 hint.setText(num1+"*"+num2+"=");
                 result_num = num1*num2;
                 result.setText(String.valueOf(result_num));
@@ -103,8 +130,17 @@ public class StandardActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                num1 = Integer.parseInt(number1.getText().toString());
-                num2 = Integer.parseInt(number2.getText().toString());
+                if(number1.length()==0){
+                    Toast.makeText(StandardActivity.this,"Please Enter First Number",Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                else if(number2.length()==0){
+                    Toast.makeText(StandardActivity.this,"Please Enter Second Number",Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                num1 = Float.parseFloat(number1.getText().toString());
+                num2 = Float.parseFloat(number2.getText().toString());
                 hint.setText(num1+"/"+num2+"=");
                 result_num = num1/num2;
                 result.setText(String.valueOf(result_num));

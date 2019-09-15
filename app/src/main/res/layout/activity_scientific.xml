@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="20"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         android:hint="Enter the Number"
         android:gravity="center"/>
 
@@ -35,6 +35,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Result"
+        android:maxLines="1"
         android:gravity="center"
         android:textSize="60sp"/>
 
