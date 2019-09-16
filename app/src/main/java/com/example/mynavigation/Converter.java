@@ -12,7 +12,7 @@ public class Converter extends AppCompatActivity {
 
     TextView result,hint,hint2;
     EditText number1;
-    Button cmtoinch,fahtocel,doltotk;
+    Button cmtoinch,fahtocel,doltotk,kgtopd;
 
 
     double result_num;
@@ -32,6 +32,7 @@ public class Converter extends AppCompatActivity {
         cmtoinch = (Button) findViewById(R.id.cmtoinch);
         fahtocel = (Button) findViewById(R.id.fahtocel);
         doltotk = (Button) findViewById(R.id.doltotk);
+        kgtopd = (Button) findViewById(R.id.kgtopd);
 
         cmtoinch.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,6 +89,28 @@ public class Converter extends AppCompatActivity {
                 hint2.setText("taka");
 
                 result_num =num1*84.50;
+                result.setText(String.valueOf(result_num));
+
+            }
+
+
+        });
+
+
+        kgtopd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if(number1.length()==0){
+                    Toast.makeText(Converter.this,"Please Enter Input",Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                num1 = Float.parseFloat(number1.getText().toString());
+                hint.setText(num1+" Kilogram =");
+                hint2.setText("Pound");
+
+                result_num =num1*2.2046;
                 result.setText(String.valueOf(result_num));
 
             }
